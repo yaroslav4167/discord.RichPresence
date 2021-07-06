@@ -1,4 +1,7 @@
 .idea
+build
+dist
 settings.ini
 config.py
+run.spec
 __pycache__

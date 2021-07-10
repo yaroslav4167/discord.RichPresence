@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>440</width>
-    <height>356</height>
+    <height>495</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>EasyRichPresence</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
@@ -26,34 +26,6 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Main</string>
-     </attribute>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>60</y>
-        <width>441</width>
-        <height>111</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_processes">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>251</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Отображение всех активных названий окон</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Connection RPC</string>
@@ -121,18 +93,58 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Main</string>
+     </attribute>
+     <widget class="QCheckBox" name="checkBox_processes">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>251</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Отображение всех активных названий окон</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QLabel" name="statusLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>320</y>
-      <width>221</width>
-      <height>16</height>
+      <x>0</x>
+      <y>290</y>
+      <width>441</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_preview">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>441</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Preview:</string>
     </property>
    </widget>
   </widget>

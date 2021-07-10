@@ -29,6 +29,7 @@ class ConfigManager(object):
                          "# Edit if you need:")
         self.set_default("next_layer_time", "7")
         self.set_default("reloading_after_exception_time", "10")
+        self.set_default("start_after_launch", "False")
         self.set_default("\n#########################################################################################\n"
                          "# Layers configuration\n"
                          "# You can use <[\"text1\", \"text2\", \"...\"]> structure for randomize activity status or "
@@ -65,7 +66,7 @@ class ConfigManager(object):
         self.default_config.set(section, option, value)
 
     def set(self, option, value, section="GeneralSettings"):
-        self.config.set(section, option, value)
+        self.config.set(section, option, str(value))
         self.config_update()
 
     def get(self, option, section="GeneralSettings"):

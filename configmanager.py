@@ -30,6 +30,7 @@ class ConfigManager(object):
         self.set_default("next_layer_time", "7")
         self.set_default("reloading_after_exception_time", "10")
         self.set_default("start_after_launch", "False")
+        self.set_default("start_in_tray", "False")
         self.set_default("\n#########################################################################################\n"
                          "# Layers configuration\n"
                          "# You can use <[\"text1\", \"text2\", \"...\"]> structure for randomize activity status or "

@@ -5,7 +5,7 @@ import pyautogui
 from pypresence import Presence
 
 
-class RPCManager(object):
+class RPCManager(Presence):
 
     def __init__(self, app_id=None):
         if app_id is None:
@@ -13,7 +13,8 @@ class RPCManager(object):
         else:
             self.app_id = app_id
         self.connected = False
-        self.RPC = None
+        # self.RPC = None
+        super(RPCManager, self).__init__(self.app_id)
 
     def set_app_id(self, app_id):
         self.app_id = app_id
@@ -24,8 +25,10 @@ class RPCManager(object):
         if self.connected:
             return "RPC already connected!"
         try:
-            self.RPC = Presence(self.app_id) # Initialize the Presence class
-            self.RPC.connect()
+            # self.RPC = Presence(self.app_id) # Initialize the Presence class
+            # self.RPC.connect()
+            self.client_id = self.app_id
+            super().connect()
         except TimeoutError:
             return "Token error!"
         finally:
@@ -35,6 +38,6 @@ class RPCManager(object):
     def disconnect(self):
         if not self.connected:
             return "RPC is not connected!"
-        self.RPC.close()
+        self.close()
         self.connected = False
         return "RPC disconnected!"
